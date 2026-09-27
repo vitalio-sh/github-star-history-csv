@@ -75,10 +75,30 @@ API evidence, clean-copy transcript and release notes were refreshed together.
 The schema change preceded the first public release, v0.1.0.
 Detailed options and API notes now live in [usage.md](usage.md).
 
+## Publication checks
+
+The public repository was cloned from its HTTPS URL with no Git credentials and
+system/global Git configuration disabled. Its offline tests and release checks
+passed. A live export then returned 188 weeks with the three-column CSV; existing
+output protection also passed. See [the public-clone record](public-clone-run.json).
+
+The anonymous API quota had been exhausted by repeated release checks, so that
+attempt returned HTTP 403 and left no partial file. The final export used
+`GITHUB_TOKEN` from the active GitHub CLI account, without saving or logging it.
+Earlier anonymous successes remain recorded in [clean-run.json](clean-run.json).
+Private repository access has not been tested.
+
+GitHub Actions passed on Ubuntu for Python 3.9 and 3.13 on initial commit
+`3785ff9f70d881c7e76821c666e87fa6f5c1d5a2`:
+[successful workflow run](https://github.com/vitalio-sh/github-star-history-csv/actions/runs/36342569935).
+The release commit must also have a successful run before tagging. The public
+README was inspected on GitHub: the SVG loaded, the three Quickstart commands
+were visible together, and About/topics were set correctly.
+
 ## Remaining boundaries
 
-Private/token-authenticated repositories, Windows and GitHub Enterprise Server
+Private repositories, Windows and GitHub Enterprise Server
 have not been tested live. The API does not establish exact historical unstar
-balances or immutable snapshots. Live quota-exhaustion errors were simulated in
-unit tests rather than induced. See the Actions link above for remote CI status;
+balances or immutable snapshots. Quota-exhaustion handling passed offline tests and was also observed during
+publication checks. See the Actions link above for remote CI status;
 local test results alone do not establish that a remote workflow succeeded.

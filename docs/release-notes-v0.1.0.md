@@ -15,6 +15,6 @@ python3 star_history.py vitalio-sh/chatgpt-3.5-turbo --output stars.csv
 `week_start` labels the start of a GitHub weekly bucket; `stars_cumulative` includes that
 bucket. GitHub's bucket boundaries may differ from UTC calendar weeks. The
 series does not claim to reproduce historical net counts after unstars.
-Private/token access and Windows were not exercised in the local release check.
+Private repository access and Windows were not exercised in the release checks.
 
 MIT licensed. See README for the API contract, examples, and troubleshooting.

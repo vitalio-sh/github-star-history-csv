@@ -30,6 +30,7 @@ The name was checked while authenticated as `vitalio-sh` before repository creat
 | [docs/validation.md](docs/validation.md) | Local and release checks |
 | [docs/readme-preview.png](docs/readme-preview.png) | First screen from a local rendering of README |
 | [docs/clean-run.json](docs/clean-run.json) | Fresh-copy command results |
+| [docs/public-clone-run.json](docs/public-clone-run.json) | Published-repository clone and live export checks |
 
 The terminal SVG renders a recorded command and output. No generated artwork or
 third-party visual assets are included.

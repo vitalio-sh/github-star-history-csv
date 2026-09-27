@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-09-27T19:00:16.105538+00:00",
+  "repository": "https://github.com/vitalio-sh/github-star-history-csv",
+  "commit": "3785ff9f70d881c7e76821c666e87fa6f5c1d5a2",
+  "git_authentication": "none; system/global git configuration disabled",
+  "api_authentication": "GITHUB_TOKEN from the active vitalio-sh GitHub CLI account; value never saved",
+  "anonymous_api_check": "HTTP 403 primary rate limit; no partial CSV. Anonymous success was verified in docs/clean-run.json before quota exhaustion.",
+  "csv_rows": 188,
+  "existing_output_protected": true,
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "----------------------------------------------------------------------\nRan 50 tests in 0.820s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_release.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Release checks passed: local links, secret/path scan, API-to-CSV fidelity, demo provenance, README sample.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "star_history.py",
+        "vitalio-sh/chatgpt-3.5-turbo",
+        "--output",
+        "stars.csv"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Exported 188 weeks from 7 pages to output file.\n"
+    }
+  ]
+}

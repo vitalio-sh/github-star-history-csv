@@ -61,7 +61,7 @@ Column order is `week_start,stars_cumulative,stars_added`. The file has one row 
 
 Public history works anonymously. If you need a higher rate allowance or access to a private repository, set `GITHUB_TOKEN` in your environment. The CLI reads only that variable; it does not discover credentials from GitHub CLI or a browser.
 
-The [official endpoint documentation](https://docs.github.com/en/rest/activity/starring?apiVersion=2026-03-10#get-repository-star-history) specifies **Metadata: read** for fine-grained tokens. Give the token access to the selected repository and any required organization authorization. GitHub App user and installation tokens are also documented. Authenticated/private access was not exercised in this release's live check.
+The [official endpoint documentation](https://docs.github.com/en/rest/activity/starring?apiVersion=2026-03-10#get-repository-star-history) specifies **Metadata: read** for fine-grained tokens. Give the token access to the selected repository and any required organization authorization. GitHub App user and installation tokens are also documented. Public access with a token was verified during publication checks; private repository access has not been tested.
 
 To enter a token without putting its value in shell history, use this Bash/Zsh snippet:
 

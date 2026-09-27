@@ -1,0 +1,107 @@
+{
+  "checked_at": "2026-09-27T18:45:20.368715+00:00",
+  "environment": "Clean temporary source copy; system Python; no token, virtual environment or user-site packages",
+  "python": "Python 3.9.6",
+  "csv_columns": [
+    "week_start",
+    "stars_cumulative",
+    "stars_added"
+  ],
+  "csv_rows": 188,
+  "csv_sha256": "86a57a78f66cfb87000b63b7998d6cc8225098f6bb18941f48f021bd1264853d",
+  "matches_committed_example": true,
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "Python 3.9.6\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "star_history.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: star_history.py [-h] --output PATH [--force] [--timeout SECONDS]\n                       [--max-pages N] [--version]\n                       owner/repo\n\nExport GitHub weekly star history as CSV: week_start, stars_cumulative,\nstars_added. Public repositories need no token.\n\npositional arguments:\n  owner/repo\n\noptional arguments:\n  -h, --help         show this help message and exit\n  --output PATH      CSV destination; use - explicitly for stdout\n  --force            atomically replace an existing output file\n  --timeout SECONDS  socket timeout per request (default: 20; maximum: 120)\n  --max-pages N      maximum history pages (1\u2013100; default: 100; 30 weeks per\n                     page)\n  --version          show program's version number and exit\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "----------------------------------------------------------------------\nRan 50 tests in 0.839s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_release.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Release checks passed: local links, secret/path scan, API-to-CSV fidelity, demo provenance, README sample.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "star_history.py",
+        "vitalio-sh/chatgpt-3.5-turbo",
+        "--output",
+        "stars.csv"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Exported 188 weeks from 7 pages to output file.\n"
+    },
+    {
+      "command": [
+        "python3",
+        "star_history.py",
+        "vitalio-sh/chatgpt-3.5-turbo",
+        "--output",
+        "stars.csv"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "error: Output already exists. Choose another path or pass --force to replace it.\n"
+    },
+    {
+      "command": [
+        "python3",
+        "star_history.py",
+        "vitalio-sh/chatgpt-3.5-turbo",
+        "--output",
+        "limited.csv",
+        "--max-pages",
+        "1"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "error: History needs more than --max-pages 1. Increase the limit (up to 100); no CSV was written.\n"
+    },
+    {
+      "command": [
+        "python3",
+        "star_history.py",
+        "vitalio-sh/star-history-missing-verification-20260927",
+        "--output",
+        "missing.csv"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "error: HTTP 403: GitHub rate limit reached. Wait before retrying; GITHUB_TOKEN may increase your quota. Rate-limit reset (Unix seconds): 1790535951.\n"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="280" viewBox="0 0 1160 280" role="img" aria-labelledby="title desc">
+<title id="title">GitHub star history to CSV: real CLI run</title>
+<desc id="desc">$ python3 star_history.py vitalio-sh/chatgpt-3.5-turbo --output stars.csv
+Exported 188 weeks from 7 pages to output file.
+$ head -n 4 stars.csv
+week_start,stars_cumulative,stars_added
+2023-02-26T00:00:00Z,36,36
+2023-03-05T00:00:00Z,82,46
+2023-03-12T00:00:00Z,99,17</desc>
+<rect width="1160" height="280" rx="14" fill="#0d1422"/>
+<path d="M14 0h1132a14 14 0 0 1 14 14v38H0V14A14 14 0 0 1 14 0" fill="#182234"/>
+<circle cx="28" cy="27" r="5" fill="#fa7a7a"/>
+<circle cx="46" cy="27" r="5" fill="#e8bf67"/>
+<circle cx="64" cy="27" r="5" fill="#6ed5a5"/>
+<text x="88" y="33" font-family="system-ui, sans-serif" font-size="18" fill="#e8edf5">GitHub Star History CSV</text>
+<text x="1132" y="33" text-anchor="end" font-family="system-ui, sans-serif" font-size="16" fill="#9baac1">LIVE API · 2026-09-27</text>
+<g font-family="Menlo, Consolas, monospace" font-size="20"><text x="28" y="88" fill="#75e6bf">$ python3 star_history.py vitalio-sh/chatgpt-3.5-turbo --output stars.csv</text>
+<text x="28" y="114" fill="#9baac1">Exported 188 weeks from 7 pages to output file.</text>
+<text x="28" y="140" fill="#75e6bf">$ head -n 4 stars.csv</text>
+<text x="28" y="166" fill="#e8edf5">week_start,stars_cumulative,stars_added</text>
+<text x="28" y="192" fill="#e8edf5">2023-02-26T00:00:00Z,36,36</text>
+<text x="28" y="218" fill="#e8edf5">2023-03-05T00:00:00Z,82,46</text>
+<text x="28" y="244" fill="#e8edf5">2023-03-12T00:00:00Z,99,17</text></g>
+</svg>

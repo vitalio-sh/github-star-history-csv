@@ -1,0 +1,20 @@
+{
+  "captured_at": "2026-09-27T18:43:33.977024+00:00",
+  "repository": "vitalio-sh/chatgpt-3.5-turbo",
+  "authentication": "none",
+  "command": [
+    "python3",
+    "star_history.py",
+    "vitalio-sh/chatgpt-3.5-turbo",
+    "--output",
+    "stars.csv"
+  ],
+  "python_version": "3.9.6",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "Exported 188 weeks from 7 pages to output file.\n",
+  "csv_sha256": "86a57a78f66cfb87000b63b7998d6cc8225098f6bb18941f48f021bd1264853d",
+  "csv_rows": 188,
+  "preview_lines": 4,
+  "source": "Actual network CLI execution from an isolated temporary directory; not test fixtures."
+}

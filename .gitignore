@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+.DS_Store
+/stars.csv
+/hello-world.csv
+/dist/
+/coverage*/
+.*.tmp

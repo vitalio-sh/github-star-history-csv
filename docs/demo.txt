@@ -1,0 +1,8 @@
+$ python3 star_history.py vitalio-sh/chatgpt-3.5-turbo --output stars.csv
+Exported 188 weeks from 7 pages to output file.
+
+$ head -n 4 stars.csv
+week_start,stars_cumulative,stars_added
+2023-02-26T00:00:00Z,36,36
+2023-03-05T00:00:00Z,82,46
+2023-03-12T00:00:00Z,99,17
